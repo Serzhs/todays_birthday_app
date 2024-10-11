@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+}
+
+.listWrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-4);
+}
+
+.loadMoreWrapper {
+  padding: var(--spacing-4) 0;
+  width: 100%;
+  text-align: center;
+}

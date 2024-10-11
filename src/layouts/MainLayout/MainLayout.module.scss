@@ -1,0 +1,29 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.header {
+  padding: var(--spacing-2) 0;
+  text-align: center;
+}
+
+.logoWrapper {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: var(--spacing-4) var(--spacing-2);
+}
+
+.footer {
+  border-top: 1px solid var(--border-color);
+  padding: var(--spacing-4) 0;
+  text-align: center;
+}
