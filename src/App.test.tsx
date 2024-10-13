@@ -4,7 +4,7 @@ import { getTodayData } from './features/TodayBirthdayList/utils/getTodayData.ts
 import { mockGetResponse, renderWithProvider } from '@/test/utils.tsx';
 
 describe('<App />', () => {
-  it('should go from home page to birthday list page and show one persons', async () => {
+  it('should navigate from home page to birthday list page and display one person', async () => {
     const { day, month } = getTodayData();
     mockGetResponse(
       `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/births/${month}/${day}`,

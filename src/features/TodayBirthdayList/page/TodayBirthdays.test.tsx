@@ -28,7 +28,7 @@ const generateBirthdayResponse = () => {
 };
 
 describe('<TodayBirthdays />', () => {
-  it('should show 21 person by default and 22 after pressing load more', async () => {
+  it('should display 21 persons by default and 22 after pressing the "Load More" button', async () => {
     const { day, month } = getTodayData();
     mockGetResponse(
       `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/births/${month}/${day}`,
@@ -53,7 +53,7 @@ describe('<TodayBirthdays />', () => {
     expect(screen.queryAllByText('Full Name:')).toHaveLength(22);
   });
 
-  it('should show error modal on API error and close it after close click', async () => {
+  it('should display an error modal on API error and close it after clicking the close button', async () => {
     const { day, month } = getTodayData();
     mockGetErrorResponse(
       `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/births/${month}/${day}`,

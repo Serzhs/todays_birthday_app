@@ -1,52 +1,92 @@
-# React + TypeScript + Vite
+# Today's Birthdays
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Today's Birthdays**! This project showcases the birthdays of well-known people occurring today. You can easily see who shares your birthday or discover interesting facts about famous individuals.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Scripts](#scripts)
+- [Testing](#testing)
+- [Linting and Formatting](#linting-and-formatting)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Displays a list of notable birthdays for today's date.
+- Simple and user-friendly interface.
+- Responsive design for mobile and desktop users.
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+- **TypeScript**: For strong typing and improved developer experience.
+- **Vite**: For fast development and build tooling.
+- **React**: For building the user interface.
+- **Jest**: For testing.
+- **ESLint**: For linting.
+- **Prettier**: For code formatting.
+
+## Installation
+
+To get started with this project, clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/yourusername/todays-birthdays.git
+cd todays-birthdays
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Usage
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react';
+To start the development server, run the following command:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-});
+```bash
+npm run dev
 ```
 
-# levelpath_homework
+Then open your browser and navigate to `http://localhost:3000` (or the port specified in your Vite configuration).
+
+## Commands
+
+This project includes several npm commands for various tasks:
+
+### Development
+
+```bash
+  npm run dev
+```
+
+### Build for Production:
+
+```bash
+npm run build
+```
+
+Compiles TypeScript and builds the project for production.
+
+### Testing
+
+```bash
+npm test
+```
+
+### Linting
+
+```bash
+npm run lint
+```
+
+### Formatting
+
+```bash
+npm run format
+```
+
+### Preview
+
+```bash
+npm run preview
+```

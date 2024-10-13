@@ -23,7 +23,5 @@
     }
   },
 
-  "include": ["src",
-    "./src/test/jest.setup.ts"
-  ]
+  "include": ["src", "./src/test/jest.setup.ts"]
 }
