@@ -1,7 +1,7 @@
 import PersonCardStyle from '../PersonCard.module.scss';
 import Typography from '../../../../../components/Typography/Typography';
 import Skeleton from '../../../../../components/Skeleton/Skeleton';
-import { getRandomNumber } from '../../../../../utils/getRandomNumber';
+import { getRandomNumber } from './utils/getRandomNumber';
 import style from '../PersonCard.module.scss';
 import Image from '../../../../../components/Image/Image';
 

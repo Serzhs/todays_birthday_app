@@ -1,4 +1,6 @@
 import React, { CSSProperties } from 'react';
+import type { JSX } from 'react';
+
 import styles from './Typography.module.scss';
 
 const variantToElement: Record<string, keyof JSX.IntrinsicElements> = {

@@ -4,11 +4,9 @@ import {
   setBirthdays,
   setError,
   setLoading,
-  TodayBirthdayState,
 } from '../store/todayBirthdaySlice';
 import { api } from '../../../api/api';
 import { getTodayData } from '../utils/getTodayData';
-import { RootState } from '../../../store/store.ts';
 import { useAppSelector } from '../../../hooks/useAppSelector';
 import { useAppDispatch } from '../../../hooks/useAppDispatch';
 
@@ -18,8 +16,8 @@ type UseGetBirthdaysProps = {
 
 export const useGetBirthdays = ({ onError }: UseGetBirthdaysProps) => {
   const { birthdays, dataIsFetching, dataFetchingError } = useAppSelector(
-    ({ todayBirthday }: RootState) => {
-      return todayBirthday as TodayBirthdayState;
+    ({ todayBirthday }) => {
+      return todayBirthday;
     },
   );
 

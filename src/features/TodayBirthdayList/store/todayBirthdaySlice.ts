@@ -1,30 +1,30 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-type Originalimage = {
-  source: string;
-  width: number;
-  height: number;
+export type BirthdayResponse = {
+  births: {
+    text: string;
+    year: number;
+    pages: {
+      originalimage?: {
+        source: string;
+        width: number;
+        height: number;
+      };
+    }[];
+  }[];
 };
 
-type Birthday = {
+type PersonBirthday = {
   occupation: string;
   fullName: string;
   year: number;
   image: string;
 };
 
-export type BirthdayResponse = {
-  births: {
-    text: string;
-    year: number;
-    pages: { originalimage: Originalimage }[];
-  }[];
-};
-
-export type TodayBirthdayState = {
+type TodayBirthdayState = {
   dataFetchingError: boolean;
   dataIsFetching: boolean;
-  birthdays: Birthday[];
+  birthdays: PersonBirthday[];
 };
 
 const initialState = {
@@ -49,7 +49,7 @@ export const todayBirthdaySlice = createSlice({
 
         let image = '/assets/images/person_image_fallback.png';
 
-        if (firstImage) {
+        if (firstImage?.originalimage) {
           image = firstImage.originalimage.source;
         }
 

@@ -9,7 +9,10 @@ import Typography from '../../../../components/Typography/Typography';
 
 const itemsPerPage = 21;
 
-const indexArray = Array.from({ length: itemsPerPage }, (_, index) => index);
+const personSkeletonsToLoad = Array.from(
+  { length: itemsPerPage },
+  (_, index) => index,
+);
 
 const TodayBirthdaysList = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -40,7 +43,7 @@ const TodayBirthdaysList = () => {
     <div className={style.container}>
       <div className={style.listWrapper}>
         {dataIsFetching &&
-          indexArray.map(() => {
+          personSkeletonsToLoad.map(() => {
             return <PersonCardSkeleton key={Math.random()} />;
           })}
 
