@@ -47,15 +47,13 @@ export const todayBirthdaySlice = createSlice({
           return !!originalimage;
         });
 
-        let image = '/assets/images/person_image_fallback.png';
-
-        if (firstImage?.originalimage) {
-          image = firstImage.originalimage.source;
-        }
+        const personsImage =
+          firstImage?.originalimage?.source ||
+          '/assets/images/person_image_fallback.png';
 
         const [fullName, occupation] = text.split(', ');
 
-        return { fullName, occupation, year, image };
+        return { fullName, occupation, year, image: personsImage };
       });
     },
     setLoading: (state: TodayBirthdayState, action: PayloadAction<boolean>) => {

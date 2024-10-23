@@ -50,7 +50,7 @@ const TodayBirthdaysList = () => {
         {!dataIsFetching &&
           paginatedBirthdays.map(({ year, fullName, occupation, image }) => (
             <PersonCard
-              key={Math.random()}
+              key={`${fullName}${year}-${fullName}-${image}`}
               year={year}
               image={image}
               fullName={fullName}
